@@ -1,0 +1,20 @@
+#article-container {
+   
+}
+
+#main-image-container {
+    width: 100%;
+}
+
+.article-main-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 70%;
+    max-width: 100%;
+}
+
+.article-content img{
+    width: 200px;
+    margin: 50px;
+}
