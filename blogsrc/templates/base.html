@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" type="text/css" href=" {% static 'main.css' %} ">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <title>LoremIpsum | Anasayfa</title>
+</head>
+
+<body>
+     <div id="header-and-nav">
+        <header id="top-header">
+            <div id="logo-text">
+                <a href="#">
+                    <h1>Lorem<span>Ipsum</span></h1>
+                </a>
+            </div>
+        </header>
+        <nav id="navbar">
+            <ul id="nav-list">
+                <li class="nav-list-item">
+                    <a class="nav-list-item-link" href="">Lorem Ipsum</a>
+                </li>
+                <li class="nav-list-item">
+                    <a class="nav-list-item-link" href="">Lorem Ipsum</a>
+                </li>
+                <li id="search" class="nav-list-item">
+                    <form id="search-form" action="">
+                        <input id="search-bar" type="text" placeholder="Başlık Ara" name="search">
+                        <button>Ara</button>
+                    </form>
+                </li>
+
+            </ul>
+        </nav>
+    </div>
+
+    {% block body %}
+
+    {% endblock body %}
+
+
+</body>
+
+</html>
