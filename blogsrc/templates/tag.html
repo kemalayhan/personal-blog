@@ -7,9 +7,11 @@
     <div class="tags-container">
         <div class="tag">
             <p class="tag-text">
-                <a class="tag-link" href="">
-                    JavaScript
-                </a>
+                
+                  {% for tag in tags  %}
+                   <a class="tag-link" href="{% url 'article_tag' slug=tag.slug %}">{{tag.title}}</a> <br>
+                  {% endfor %}
+                
             </p>
         </div>
     </div>

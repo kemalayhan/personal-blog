@@ -13,17 +13,17 @@
         <h1 class="card-heading">En Son Paylaşılanlar</h1>
     </header>
     <div class="card-container">
-    {% for object in object_list %}
+    {% for article in articles %}
     <div class="card">
-        {% if object.main_image %}
-        <img class="card-image" src=" {{ object.main_image.url }} " alt="image">
+        {% if article.main_image %}
+        <img class="card-image" src=" {{ article.main_image.url }} " alt="image">
         {% endif %}
         <div class="title-and-text">
-            <a class="card-title-link" href="{% url 'article_detail' slug=object.slug %}">
-                <h2 class="card-title-text"> {{ object.title }} </h2>
+            <a class="card-title-link" href="{% url 'article_detail' slug=article.slug %}">
+                <h2 class="card-title-text"> {{ article.title }} </h2>
             </a>
             <p class="card-text">
-                {{ object.brief}}
+                {{ article.brief}}
             </p>
         </div>
     </div>

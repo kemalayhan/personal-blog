@@ -12,6 +12,7 @@ class Article(models.Model):
     slug = models.SlugField(unique=True, blank=True)
     created = models.DateField(auto_now_add=True)
     updated = models.DateField(auto_now=True)
+    tag = models.ManyToManyField('Tag')
 
     def __str__(self):
         return self.title
@@ -20,6 +21,18 @@ class Article(models.Model):
         return reverse("article_detail", kwargs={"slug": self.slug})
     
  
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.title)
+        return super().save(*args, **kwargs)
+
+class Tag(models.Model):
+    title = models.CharField(max_length=50)
+    slug = models.SlugField(blank=True)
+
+    def __str__(self):
+        return self.title
+
     def save(self, *args, **kwargs):
         if not self.slug:
             self.slug = slugify(self.title)
