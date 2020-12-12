@@ -1,4 +1,4 @@
-#card-header {
+.card-header {
     color: var(--color-light-blue);
     width: max-content;
     margin-bottom: 20px;
@@ -7,7 +7,7 @@
 
 /* CARD */
 
-#card-container {
+.card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -25,7 +25,7 @@
     padding: 10px;
 }
 
-#card-container .card:nth-child(odd) {
+.card-container .card:nth-child(odd) {
     margin-right: 20px;
 }
 

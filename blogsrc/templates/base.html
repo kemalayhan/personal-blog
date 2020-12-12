@@ -7,21 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
     <link rel="stylesheet" type="text/css" href="{% static 'css/base.css'%}">
-    {% block cards_css %} 
-    
+    {% block cards_css %}
+
     {% endblock cards_css%}
 
-    {% block detail_css %} 
-    
+    {% block detail_css %}
+
     {% endblock detail_css %}
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
     <title>LoremIpsum | Anasayfa</title>
-    
+
     {% block detail_js %}
-    
+
     {% endblock detail_js %}
 </head>
 
@@ -34,6 +34,8 @@
 
             {% endblock body %}
         </section>
+
+        {% include 'tag.html' %}
     </main>
 </body>
 
