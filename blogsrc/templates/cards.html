@@ -8,11 +8,11 @@
 
 
 {% block body %}
-
-<header id="card-header">
-    <h1 id="card-heading">En Son Paylaşılanlar</h1>
-</header>
-<div id="card-container">
+<div class="cards-and-header">
+    <header class="card-header">
+        <h1 class="card-heading">En Son Paylaşılanlar</h1>
+    </header>
+    <div class="card-container">
     {% for object in object_list %}
     <div class="card">
         {% if object.main_image %}
@@ -29,5 +29,7 @@
     </div>
     {% endfor %}
 </div>
+</div>
+
 
 {% endblock body %}

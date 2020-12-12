@@ -1,0 +1,40 @@
+
+.wrapper {
+    margin-right: 30px; 
+    margin-top: 50px;
+}
+
+.tags-container {
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(45, 253, 155, 1) 100%);
+    border: 6px double white;
+    border-radius: 15px;
+    width: 250px;
+    min-height:100px;
+    max-height: 100px;  
+}
+
+.tags-header {
+    margin-bottom: 10px;
+}
+
+.tags-heading {
+    color: var(--color-light-blue);
+    font-size: 2rem;
+}
+
+.tag {
+    background-color: var(--color-light-gray);
+    border: 3px solid var(--color-transparent-blue);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    width: max-content;
+    padding: 5px;
+}
+
+.tag-link {
+    color: var(--color-light-blue);
+    font-size: 1.5rem;
+    font-weight: 600;
+}

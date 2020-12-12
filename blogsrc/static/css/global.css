@@ -17,6 +17,7 @@ a {
 }
 
 main {
+    display: flex;
     box-sizing: border-box;
     padding-top: 20px;
 }
