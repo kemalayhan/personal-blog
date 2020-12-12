@@ -1,4 +1,12 @@
 {% extends 'base.html' %}
+{% load static%}
+
+{% block cards_css %}
+     <link rel="stylesheet" type="text/css" href="{% static 'css/cards.css'%}">
+{% endblock cards_css %}
+
+
+
 {% block body %}
 
 <header id="card-header">
@@ -15,7 +23,7 @@
                 <h2 class="card-title-text"> {{ object.title }} </h2>
             </a>
             <p class="card-text">
-                {{ object.brief }}
+                {{ object.brief}}
             </p>
         </div>
     </div>

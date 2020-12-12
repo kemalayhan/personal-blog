@@ -1,16 +1,25 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block detail_css %}
+     <link rel="stylesheet" type="text/css" href="{% static 'css/article_detail.css'%}">
+{% endblock detail_css %}
+
+{% block detail_js %}
+    <script defer src="{% static 'js/article_detail.js'%}"></script>
+{% endblock detail_js %}
 
 {% block body %}
-    <div id="article-container">
+    <div class="article-container">
 
-        <div id="main-image-container">
+        <div class="main-image-container">
             {% if object.main_image %}
                 <img class="article-main-image" src=" {{ object.main_image.url }} " alt="image">
             {% endif %}
         </div>
 
-        <header id="A">
-            <h1 id="B">
+        <header class="article-header">
+            <h1 class="article-header-h1">
                 {{object.title}}
             </h1>
         </header>
