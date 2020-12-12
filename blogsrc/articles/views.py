@@ -9,4 +9,4 @@ class ArticleDetailView(DetailView):
 
 class ArticleListView(ListView):
     model = Article
-    template_name = "article_list.html"
+    template_name = "cards.html"

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<header id="card-header">
+    <h1 id="card-heading">En Son Paylaşılanlar</h1>
+</header>
+<div id="card-container">
+    {% for object in object_list %}
+    <div class="card">
+        {% if object.main_image %}
+        <img class="card-image" src=" {{ object.main_image.url }} " alt="image">
+        {% endif %}
+        <div class="title-and-text">
+            <a class="card-title-link" href="{% url 'article_detail' slug=object.slug %}">
+                <h2 class="card-title-text"> {{ object.title }} </h2>
+            </a>
+            <p class="card-text">
+                {{ object.brief }}
+            </p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock body %}
