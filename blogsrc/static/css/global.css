@@ -8,8 +8,10 @@ html {
 }
 
 body {
-    background-color: var(--color-light-gray);
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(230, 230, 230), 
+    rgb(150, 150, 150));
     font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
 }
 
 a {

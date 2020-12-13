@@ -5,14 +5,12 @@
         </h3>
     </header>
     <div class="tags-container">
+        {% for tag in tags %}
         <div class="tag">
             <p class="tag-text">
-                
-                  {% for tag in tags  %}
-                   <a class="tag-link" href="{% url 'article_tag' slug=tag.slug %}">{{tag.title}}</a> <br>
-                  {% endfor %}
-                
+                <a class="tag-link" href="{% url 'article_tag' slug=tag.slug %}">{{tag.title}}</a> <br>
             </p>
         </div>
+        {% endfor %}
     </div>
 </div>

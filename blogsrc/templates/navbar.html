@@ -1,13 +1,20 @@
-<div id="header-and-nav">
-    <header id="top-header">
-        <div id="logo-text">
+<div class="header-and-nav">
+    <div class="hamburger-menu">
+        <div class="stick"></div>
+        <div class="stick"></div>
+        <div class="stick"></div>
+    </div>
+
+    <header class="top-header">
+        <div class="logo-text">
             <a href="{% url 'index' %}">
                 <h1>Lorem<span>Ipsum</span></h1>
             </a>
         </div>
     </header>
-    <nav id="navbar">
-        <ul id="nav-list">
+
+    <nav class="navbar js-hide">
+        <ul class="nav-list">
             <li class="nav-list-item">
                 <a class="nav-list-item-link" href="">Lorem Ipsum</a>
             </li>
@@ -15,12 +22,11 @@
                 <a class="nav-list-item-link" href="">Lorem Ipsum</a>
             </li>
             <li id="search" class="nav-list-item">
-                <form id="search-form" action="">
-                    <input id="search-bar" type="text" placeholder="Başlık Ara" name="search">
-                    <button>Ara</button>
+                <form class="search-form" action="">
+                    <input class="search-bar" type="text" placeholder="Başlık Ara" name="search">
+                    <button><i class="fas fa-search"></i></button>
                 </form>
             </li>
-
         </ul>
     </nav>
 </div>
