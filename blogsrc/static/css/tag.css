@@ -2,15 +2,20 @@
 .wrapper {
     margin-right: 30px; 
     margin-top: 50px;
+    width: max-content;
+    height: max-content;
 }
 
 .tags-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(45, 253, 155, 1) 100%);
     border: 6px double white;
     border-radius: 15px;
+    flex-wrap: wrap;
     width: 250px;
     min-height:100px;
-    max-height: 100px;  
 }
 
 .tags-header {

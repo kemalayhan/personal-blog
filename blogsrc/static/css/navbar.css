@@ -1,18 +1,17 @@
-#header-and-nav {
+.header-and-nav {
     border-bottom: 1px solid var(--color-transparent-blue);
     display: flex;
     align-items: center;
     padding: 20px 20px 20px 20px;
 }
 
-
-#top-header {
+.top-header {
     padding-left: 10px;
     padding-right: 10px;
     width: max-content;
 }
 
-#logo-text h1 {
+.logo-text h1 {
     color: var(--color-light-blue);
     font-size: 3.5rem;
     width: max-content;
@@ -24,7 +23,7 @@
 
 /* NAVBAR */
 
-#navbar {
+.navbar {
     font-size: 1.8rem;
     text-transform: uppercase;
     padding-left: 70px;
@@ -86,4 +85,72 @@
 #search button {
     height: 34px;
     margin-left: 5px;
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+/* MEDIA QUERIES */
+
+@media(min-width:630px) and (max-width:920px), (max-width: 450px) {
+    .top-header {
+        display: none;
+    }
+}
+
+@media (max-width:920px) {
+    .navbar {
+        padding-left: 5px;
+    }
+}
+
+@media (min-width:450px){
+    .top-header {
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    .logo-text h1 {
+        font-size: 2.5rem;
+    }
+
+}
+
+@media (max-width: 630px) {
+    .header-and-nav {
+        border-bottom: none;
+    }
+
+    .js-hide {
+        display: none;
+    }
+
+    .js-header-and-nav {
+        display: flex;
+    }
+
+    /* HAMBURGER MENU */
+
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+        transition: transform 1s;
+    }
+
+    .js-rotate {
+        transform: rotate(-90deg);
+    }
+
+
+    .hamburger-menu div {
+        width: 35px;
+        height: 5px;
+        background-image: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(45, 253, 155, 1) 100%);
+        transition: 0.4s;
+    }
+
+    .hamburger-menu div:nth-child(2) {
+        margin: 6px 0;
+    }
 }
