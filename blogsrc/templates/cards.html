@@ -10,7 +10,12 @@
 {% block body %}
 <div class="cards-and-header">
     <header class="card-header">
-        <h1 class="card-heading">En Son Paylaşılanlar</h1>
+    {% if tag %}
+    <h1 class="card-heading">{{ tag.title }}</h1>
+    {% else %}
+    <h1 class="card-heading">En Son Paylaşılanlar</h1>
+    {% endif %}
+        
     </header>
     <div class="card-container">
     {% for article in articles %}

@@ -13,6 +13,9 @@ class Article(models.Model):
     created = models.DateField(auto_now_add=True)
     updated = models.DateField(auto_now=True)
     tag = models.ManyToManyField('Tag')
+    
+    class Meta:
+        ordering = ['-pk']
 
     def __str__(self):
         return self.title

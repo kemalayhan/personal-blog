@@ -18,6 +18,7 @@ class ArticleListView(TagMixin, ListView):
 class ArticleTagView(TagMixin, DetailView):
     model = Tag
     template_name = "cards.html"
+    context_object_name = "tag"
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
