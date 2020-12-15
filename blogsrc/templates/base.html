@@ -11,7 +11,7 @@
     {% endblock cards_css%}
 
     {% block detail_css %}
-
+    
     {% endblock detail_css %}
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -31,7 +31,8 @@
 
             {% endblock body %}
         </section>
-        {% include 'tag.html' %}
+        {% block tags%}
+        {% endblock tags%}
     </main>
 </body>
 
