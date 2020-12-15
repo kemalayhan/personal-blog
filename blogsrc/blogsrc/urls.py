@@ -7,7 +7,7 @@ from django.urls import path, include, re_path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('about/', TemplateView.as_view(template_name="about.html"), name="about"),
+    path('page/about/', TemplateView.as_view(template_name="about.html"), name="about"),
     path('', include('articles.urls')),
     re_path(r'^ckeditor/', include('ckeditor_uploader.urls')),
 ]
