@@ -1,0 +1,31 @@
+.profile-container {
+    border: 1px solid;
+    margin-top: 20px;
+    max-width: 1000px;
+    min-width: 275px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.introduction-header {
+    color: var(--color-light-blue);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: max-content;
+}
+
+.introduction-heading {
+    font-size: 3rem;
+}
+
+.introduction-text {
+    font-size: 1.7rem;
+}
+
+.profile-card {
+    max-width: 300px;
+}
+
+
+
+
