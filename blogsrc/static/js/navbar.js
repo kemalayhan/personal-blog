@@ -30,7 +30,7 @@ hamburgerMenu.addEventListener("click", () => {
    event => {
       window.addEventListener(event, () => {
          if (navItems[0].classList.contains("js-nav-list-item-hide")) {
-            if (window.screen.availWidth > 600) {
+            if (window.screen.availWidth > 630) {
                for (let element of navItems) {
                   element.classList.remove("js-nav-list-item-hide");
                   element.classList.remove("js-nav-list-item-show");
