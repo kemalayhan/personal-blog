@@ -19,10 +19,11 @@
     border: 6px double white;
     border-radius: 20px;
     display: flex;
-    width: 400px;
+    width: 60%;
     height: 190px;
     margin-bottom: 20px;
     padding: 10px;
+
 }
 
 .card-container .card:nth-child(odd) {
@@ -41,6 +42,7 @@
 
 .title-and-text {
     padding-left: 10px;
+    overflow: hidden;
 }
 
 .card-title-link {
