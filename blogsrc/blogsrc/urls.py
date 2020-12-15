@@ -7,9 +7,10 @@ from django.urls import path, include, re_path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('articles.urls'), name='articles'),
-    path('about', TemplateView.as_view(template_name="about.html"), name="about"),
+    path('about/', TemplateView.as_view(template_name="about.html"), name="about"),
+    path('', include('articles.urls')),
     re_path(r'^ckeditor/', include('ckeditor_uploader.urls')),
 ]
 
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
