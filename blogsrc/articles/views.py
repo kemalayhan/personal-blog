@@ -10,10 +10,18 @@ class ArticleDetailView(TagMixin, DetailView):
 
 
 class ArticleListView(TagMixin, ListView):
-    model = Article
     template_name = "cards.html"
     context_object_name = "articles"
 
+    def get_queryset(self):
+        qs = Article.objects.defer(
+                'content',
+                'created',
+                'updated',
+                'tag'
+        )
+        return qs
+    
 
 class ArticleTagView(TagMixin, DetailView):
     model = Tag
