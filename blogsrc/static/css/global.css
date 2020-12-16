@@ -1,17 +1,23 @@
+:root {
+    --color-light-gray: hsl(0, 0%, 95%);
+    --color-light-blue: hsl(217, 71%, 47%);
+    --color-transparent-blue: hsla(225, 100%, 65%, 0.2);
+    --color-dark-blue: hsl(244, 86%, 22%);
+}
+
 *, ::before, ::after, h1, h2 {
     margin: 0px;
     padding: 0px;
 }
 
-html {
+html, body {
+    min-height: 100vh;
     font-size: 10px;
 }
 
 body {
-    background-image: linear-gradient(rgb(255, 255, 255), rgb(230, 230, 230), 
-    rgb(150, 150, 150));
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(230, 230, 230), rgb(150, 150, 150));
     font-family: 'Roboto', sans-serif;
-    min-height: 100vh;
 }
 
 a {
@@ -22,6 +28,7 @@ main {
     display: flex;
     box-sizing: border-box;
     padding-top: 20px;
+    min-height: calc(100vh - 80px);
 }
 
 #container { 
@@ -30,4 +37,16 @@ main {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+}
+
+footer {
+    background-color: rgba(19, 16, 16, 0.534);
+    height: 60px;
+}
+
+.footer-text {
+    color: white;
+    line-height: 60px;
+    font-size: 2rem;
+    text-align: center;
 }

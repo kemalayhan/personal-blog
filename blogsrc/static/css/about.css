@@ -1,5 +1,4 @@
 .profile-container {
-    border: 1px solid;
     margin-top: 20px;
     max-width: 1000px;
     min-width: 275px;
@@ -23,9 +22,46 @@
 }
 
 .profile-card {
-    max-width: 300px;
+    display: grid;
+    grid-gap: 10px 15px;
+    grid-template-columns: 100px 200px;
+    grid-template-rows: 30px 70px;
+    width: 300px;
+    height: 100px;
+    margin-top: 20px;
+    padding: 20px 10px 20px 10px;
 }
 
+.profile-image {
+    width: 100px;
+    height: 100px;    
+    border: 3px double white;
+    border-radius:30px;
+    margin-right: 10px;
+    grid-row: 1 / -1;
+}
 
+.author-header {
+    margin-top: 12px;
+    grid-column: 2 / 3;
+}
+
+.author-heading {
+    font-size: 2rem;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.social-icon-link:nth-child(2) {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.social-icon:hover path {
+    fill: white;
+}
 
 
