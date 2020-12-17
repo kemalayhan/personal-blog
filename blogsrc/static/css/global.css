@@ -50,3 +50,20 @@ footer {
     font-size: 2rem;
     text-align: center;
 }
+
+.sidebar {
+    border: 1px solid slategrey;
+    height: max-content;
+    width: max-content;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 50px;
+}
+
+.vertical-ad {
+    border: 1px solid;
+    width: 170px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
