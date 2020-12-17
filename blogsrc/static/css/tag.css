@@ -1,7 +1,6 @@
 
-.wrapper {
-    margin-right: 30px; 
-    margin-top: 50px;
+.tags-wrapper {
+    margin-bottom: 10px;
     width: max-content;
     height: max-content;
 }
@@ -54,3 +53,11 @@
     font-weight: 600;
 }
 
+/* MEDIA QUERIES */ 
+
+@media (max-width:600px) {
+    .tags-container{
+        margin-top: 25px;
+        max-width: 100px;
+   }
+}

@@ -90,3 +90,27 @@
 .arrow-icon:hover path {
     fill: white;
 }
+
+
+/* MEDIA QUERIES */
+
+@media(max-width:760px) {
+    .card {
+        flex-direction: column;
+        align-items: center;
+        width: 250px;
+        height: 370px;
+    }
+
+    .card-image {
+        height: auto;
+        max-width: 90%;
+        margin-bottom: 10px;
+    }
+}
+
+@media(max-width:450px) {
+    .card {
+        margin-right: 0px;
+    }
+}
