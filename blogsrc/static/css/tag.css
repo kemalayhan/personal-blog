@@ -53,3 +53,11 @@
     font-weight: 600;
 }
 
+/* MEDIA QUERIES */ 
+
+@media (max-width:600px) {
+    .tags-container{
+        margin-top: 25px;
+        max-width: 100px;
+   }
+}

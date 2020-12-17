@@ -18,6 +18,7 @@ html, body {
 body {
     background-image: linear-gradient(rgb(255, 255, 255), rgb(230, 230, 230), rgb(150, 150, 150));
     font-family: 'Roboto', sans-serif;
+    position: relative;
 }
 
 a {
@@ -76,6 +77,8 @@ footer {
     height: 100px;
 }
 
+/* MEDIA QUERIES */
+
 /*
 @media (max-width:760px) {
     .horizontal-ad {
@@ -83,3 +86,20 @@ footer {
     }
 }
 */
+
+@media(max-width:600px) {
+    .sidebar {
+        padding: 0px;
+        margin-right: 40px;
+    }
+
+    .vertical-ad {
+        display: none;
+    }
+}
+
+@media (max-width:450px) {
+    .sidebar {
+       display: none;
+    }
+}
