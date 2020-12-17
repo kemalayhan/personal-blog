@@ -13,6 +13,7 @@
 html, body {
     min-height: 100vh;
     font-size: 10px;
+
 }
 
 body {
@@ -32,7 +33,7 @@ main {
     min-height: calc(100vh - 80px);
 }
 
-#container {
+.container {
     display: flex;
     flex-direction: column;
     width: 80%;
@@ -101,5 +102,13 @@ footer {
 @media (max-width:450px) {
     .sidebar {
        display: none;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .card-container {
+        padding-left: 0px !important;
     }
 }
