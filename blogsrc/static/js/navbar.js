@@ -64,5 +64,12 @@ function showOrHideTags() {
 arrow.addEventListener("click", event => {
    arrow.classList.toggle("js-arrow");
    showOrHideTags();
+});
+
+window.addEventListener('orientationchange', () => {
+   if(arrow.classList.contains("js-arrow")) {
+      arrow.classList.remove("js-arrow");
+      tagsContainer.classList.remove("js-tag");
+   }
 })
 
