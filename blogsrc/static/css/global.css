@@ -59,11 +59,11 @@ footer {
     width: max-content;
     padding-left: 20px;
     padding-right: 20px;
-    padding-top: 50px;
+    margin-top: 50px;
 }
 .vertical-ad {
     width: 150px;
-    height: 150px;
+    height: 350px;
 }
 
 @media (max-width:450px) {
