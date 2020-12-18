@@ -20,8 +20,6 @@
 
 <body>
     {% include 'navbar.html' %}
-    <div class="horizontal-ad">
-    </div>
     <main id="main-content">
         <section class="container">
             {% block body %}
@@ -29,13 +27,7 @@
             {% endblock body %}
         </section>
         <aside class="sidebar">
-            {% block tags %}
-
-            {% endblock tags %}
-
-            <div class="vertical-ad">
-
-            </div>
+            <div class="vertical-ad"></div>
         </aside>
     </main>
     <footer>

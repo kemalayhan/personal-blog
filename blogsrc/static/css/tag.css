@@ -1,63 +1,37 @@
-
 .tags-wrapper {
     margin-bottom: 10px;
+    margin-top: 10px;
     width: max-content;
     height: max-content;
+    position: absolute;
+    left: -20px;
+    visibility: hidden;
+    z-index: 999;
 }
 
 .tags-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(45, 253, 155, 1) 100%);
     border: 6px double white;
     border-radius: 15px;
-    flex-wrap: wrap;
-    width: 250px;
-    min-height:100px;
-}
-
-.tags-header {
-    margin-bottom: 10px;
-    
-}
-
-.tags-heading {
-    color: var(--color-light-blue);
-    font-size: 2rem;
+    width: max-content;
 }
 
 .tag {
     background-color: var(--color-light-gray);
     border: 3px solid var(--color-transparent-blue);
     border-radius: 50px;
-    display: flex;
-    align-items: center;
     margin: 10px;
-    width: max-content;
     padding: 5px;
 }
 
-.tag:hover {
-    background-color: hsl(0, 1%, 21%);
+.tag-text {
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
 }
-
-.tag:hover *{
-    color: white;
-}
-
 
 .tag-link {
     color: var(--color-light-blue);
     font-size: 1.5rem;
     font-weight: 600;
-}
-
-/* MEDIA QUERIES */ 
-
-@media (max-width:600px) {
-    .tags-container{
-        margin-top: 25px;
-        max-width: 100px;
-   }
 }

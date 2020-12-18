@@ -84,7 +84,7 @@
 }
 
 .arrow-icon path {
-    fill: var(--color-light-blue);
+    fill: var(--color-purple);
 }
 
 .arrow-icon:hover path {

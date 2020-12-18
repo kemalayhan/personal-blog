@@ -43,7 +43,7 @@
     list-style: none;
 }
 
-.nav-list-item:nth-child(1) {
+.nav-list-item:nth-child(1), .nav-list-item:nth-child(2) {
     padding-right: 50px;
 }
 
@@ -68,7 +68,6 @@
 
 #search {
     margin-left: auto;
-    margin-right: 0;
     width: max-content;
 }
 
@@ -81,7 +80,7 @@
     border: 2px solid var(--color-light-gray);
     border-right: 0px;
     height: 30px;
-    width: 200px;  
+    width: 200px;
     padding-left: 5px;
 }
 
@@ -104,6 +103,39 @@
 .search-icon {
     width: 20px;
     height: 20px;
+}
+
+#tag {
+    color: var(--color-light-blue);
+    cursor: pointer;
+    font-weight: 500;
+    position: relative;
+}
+
+#tag::after {
+    display: block;
+    content: '';
+    width: 0px;
+    height: 2px;
+    background-color: var(--color-transparent-blue);
+    transition: all 1s ease;
+}
+
+#tag:hover::after {
+    width: 100%;
+}
+
+.arrow {
+    width: 15px;
+    transition: transform 1s;
+}
+
+.arrow path {
+    fill: var(--color-purple);
+}
+
+.js-arrow {
+    transform: rotate(180deg);
 }
 
 .hamburger-menu {
@@ -190,27 +222,30 @@
         width: max-content;
         transform: translateX(-300vh);
     }
+    #search {
+        margin-left: auto;
+        margin-right: auto;
+        border-bottom: none;
+    }
     .nav-list-item:nth-child(1) {
         padding-right: 0;
     }
     .js-nav-list-item-hide {
         transform: translateX(-300vh);
-        transition: transform 1.2s ease;
+        transition: transform 1s;
     }
     .js-nav-list-item-hide:nth-child(1) {
         padding-right: 0;
-        transition-delay: 0.6s;
+        transition-delay: 800ms;
     }
     .js-nav-list-item-hide:nth-child(2) {
-        transition-delay: 0.4s;
+        transition-delay: 600ms;
     }
     .js-nav-list-item-hide:nth-child(3) {
-        transition-delay: 0.2s;
+        transition-delay: 400ms;
     }
-    #search {
-        margin-left: auto;
-        margin-right: auto;
-        border-bottom: none;
+    .js-nav-list-item-hide:nth-child(4) {
+        transition-delay: 200ms;
     }
     .js-navbar {
         height: 190px;
@@ -222,13 +257,16 @@
     }
     .js-nav-list-item-show:nth-child(1) {
         padding-right: 0;
-        transition-delay: 0.2s;
+        transition-delay: 200ms;
     }
     .js-nav-list-item-show:nth-child(2) {
-        transition-delay: 0.4s;
+        transition-delay: 400ms;
     }
     .js-nav-list-item-show:nth-child(3) {
-        transition-delay: 0.6s;
+        transition-delay: 600ms;
+    }
+    .js-nav-list-item-show:nth-child(4) {
+        transition-delay: 800ms;
     }
 }
 
@@ -236,8 +274,16 @@
     .search-button {
         width: max-content;
     }
-
     .search-bar {
         width: 150px;
+    }
+}
+
+@media(max-width:450px) {
+    .js-navbar {
+        height: 250px;
+    }
+    .nav-list {
+        height: inherit;
     }
 }
