@@ -4,7 +4,8 @@ let navItems = document.getElementsByClassName("nav-list-item")
 let hamburgerMenu = document.querySelector(".hamburger-menu");
 let status = true;
 
-
+let tagsContainer = document.getElementsByClassName("tags-container")[0];
+let arrow = document.getElementsByClassName("arrow")[0];
 
 hamburgerMenu.addEventListener("click", () => {
    if (status) {
@@ -26,6 +27,18 @@ hamburgerMenu.addEventListener("click", () => {
    }
 });
 
+
+function changeZindex() {
+   navItems[3].classList.toggle("js-search");
+}
+
+
+arrow.addEventListener("click", event => {
+   arrow.classList.toggle("js-arrow");
+   tagsContainer.classList.toggle("js-tag");
+   changeZindex();
+});
+
 ['orientationchange', 'resize'].forEach(
    event => {
       window.addEventListener(event, () => {
@@ -43,30 +56,14 @@ hamburgerMenu.addEventListener("click", () => {
             }
             status = true;
          }
+
+         if (arrow.classList.contains("js-arrow")) {
+            arrow.classList.remove("js-arrow");
+            tagsContainer.classList.remove("js-tag");
+            changeZindex();
+         }
       })
    }
 );
 
-
-/* TAGS */
-
-let tagsContainer = document.getElementsByClassName("tags-container")[0];
-let arrow = document.getElementsByClassName("arrow")[0];
-
-function showOrHideTags() {
-   tagsContainer.classList.toggle("js-tag");
-
-};
-
-arrow.addEventListener("click", event => {
-   arrow.classList.toggle("js-arrow");
-   showOrHideTags();
-});
-
-window.addEventListener('orientationchange', () => {
-   if(arrow.classList.contains("js-arrow")) {
-      arrow.classList.remove("js-arrow");
-      tagsContainer.classList.remove("js-tag");
-   }
-})
 
