@@ -57,11 +57,13 @@ arrow.addEventListener("click", event => {
             status = true;
          }
 
-            if (arrow.classList.contains("js-arrow")) {
-               arrow.classList.remove("js-arrow");
-               tagsContainer.classList.remove("js-tag");
-               changeZindex();
-            }
+         if (arrow.classList.contains("js-arrow")) {
+            arrow.classList.remove("js-arrow");
+            tagsContainer.classList.remove("js-tag");
+            changeZindex();
+         }
       })
    }
 );
+
+
