@@ -1,10 +1,19 @@
 .tags-container {
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(34, 193, 195, 1)), to(rgba(45, 253, 155, 1)));
+    background: -o-linear-gradient(bottom, rgba(34, 193, 195, 1) 0%, rgba(45, 253, 155, 1) 100%);
     background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(45, 253, 155, 1) 100%);
     border: 6px double white;
     border-radius: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 130px;
     max-height: 0;
     margin-bottom: 10px;
@@ -12,16 +21,22 @@
     overflow: hidden;
     position: absolute;
     left: -20px;
+    -webkit-transition: max-height 1s, visibility 1s;
+    -o-transition: max-height 1s, visibility 1s;
     transition: max-height 1s, visibility 1s;
     visibility: hidden;
     z-index: 999;
-}
+} 
 
 .tag {
     background-color: var(--color-light-gray);
     border: 3px solid var(--color-transparent-blue);
     border-radius: 50px;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     margin: 10px;
     padding: 5px;
@@ -30,6 +45,8 @@
 .tag-text {
     margin-left: auto;
     margin-right: auto;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
 }
 

@@ -10,8 +10,10 @@
     color: var(--color-light-blue);
     margin-top: 10px;
     margin-bottom: 10px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
-}
+} 
 
 .introduction-heading {
     font-size: 3rem;
