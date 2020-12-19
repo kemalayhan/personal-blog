@@ -30,7 +30,7 @@ hamburgerMenu.addEventListener("click", () => {
    event => {
       window.addEventListener(event, () => {
          if (navItems[0].classList.contains("js-nav-list-item-hide")) {
-            if (window.screen.availWidth > 630) {
+            if (window.screen.availWidth > 730) {
                for (let element of navItems) {
                   element.classList.remove("js-nav-list-item-hide");
                   element.classList.remove("js-nav-list-item-show");
@@ -46,3 +46,27 @@ hamburgerMenu.addEventListener("click", () => {
       })
    }
 );
+
+
+/* TAGS */
+
+let tagsContainer = document.getElementsByClassName("tags-container")[0];
+let arrow = document.getElementsByClassName("arrow")[0];
+
+function showOrHideTags() {
+   tagsContainer.classList.toggle("js-tag");
+
+};
+
+arrow.addEventListener("click", event => {
+   arrow.classList.toggle("js-arrow");
+   showOrHideTags();
+});
+
+window.addEventListener('orientationchange', () => {
+   if(arrow.classList.contains("js-arrow")) {
+      arrow.classList.remove("js-arrow");
+      tagsContainer.classList.remove("js-tag");
+   }
+})
+

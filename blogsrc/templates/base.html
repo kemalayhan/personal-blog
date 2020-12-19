@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/base.css'%}">
     {% block cards_css %}{% endblock cards_css%}
     {% block detail_css %}{% endblock detail_css %}
+    {% block about_css %}{% endblock about_css %}
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -20,23 +21,17 @@
 
 <body>
     {% include 'navbar.html' %}
-    <div class="horizontal-ad">
-    </div>
     <main id="main-content">
         <section class="container">
             {% block body %}
 
             {% endblock body %}
         </section>
+        <!--
         <aside class="sidebar">
-            {% block tags %}
-
-            {% endblock tags %}
-
-            <div class="vertical-ad">
-
-            </div>
+            <div class="vertical-ad"></div>
         </aside>
+        -->
     </main>
     <footer>
         <p class="footer-text">Lorem, ipsum.</p>

@@ -36,9 +36,7 @@ main {
 .container {
     display: flex;
     flex-direction: column;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 95%;
 }
 
 footer {
@@ -53,57 +51,26 @@ footer {
     text-align: center;
 }
 
+/*
 .sidebar {
+    border: 1px solid;
     height: max-content;
     width: max-content;
     padding-left: 20px;
     padding-right: 20px;
-    padding-top: 50px;
+    margin-top: 50px;
 }
-
 .vertical-ad {
-    width: 170px;
-    height: 200px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.horizontal-ad {
-    display: none;
-    box-sizing: border-box;
-    border: 1px solid;
-    margin-left: 30px;
-    max-width: 700px;
-    width: max-content;
-    height: 100px;
-}
-
-/* MEDIA QUERIES */
-
-/*
-@media (max-width:760px) {
-    .horizontal-ad {
-        display: block;
-    }
+    width: 150px;
+    height: 350px;
 }
 */
-
-@media(max-width:600px) {
-    .sidebar {
-        padding: 0px;
-        margin-right: 40px;
-    }
-
-    .vertical-ad {
-        display: none;
-    }
-}
-
 @media (max-width:450px) {
+    /*
     .sidebar {
        display: none;
     }
-
+    */
     .container {
         width: 100%;
     }

@@ -1,16 +1,9 @@
-<div class="tags-wrapper">
-    <header class="tags-header">
-        <h3 class="tags-heading">
-            Etiketler
-        </h3>
-    </header>
-    <div class="tags-container">
-        {% for tag in tags %}
-        <div class="tag">
-            <p class="tag-text">
-                <a class="tag-link" href="{% url 'article_tag' slug=tag.slug %}">{{tag.title}}</a> <br>
-            </p>
-        </div>
-        {% endfor %}
+<div class="tags-container">
+    {% for tag in tags %}
+    <div class="tag">
+        <p class="tag-text">
+            <a class="tag-link" href="{% url 'article_tag' slug=tag.slug %}">{{tag.title}}</a> <br>
+        </p>
     </div>
+    {% endfor %}
 </div>
