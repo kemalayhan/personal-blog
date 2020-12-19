@@ -6,7 +6,7 @@ from django.shortcuts import reverse
 
 class Article(models.Model):
     title = models.CharField(max_length=70)
-    brief = models.CharField(max_length=140)
+    brief = models.CharField(max_length=250)
     content = RichTextUploadingField(blank=True, null=True)
     main_image = models.ImageField(upload_to='article_image/')
     slug = models.SlugField(unique=True, blank=True)

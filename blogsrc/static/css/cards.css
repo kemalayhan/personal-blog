@@ -26,16 +26,16 @@
 .card {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    background: -webkit-gradient(linear, left bottom, left top, from(rgba(34, 193, 195, 1)), to(rgba(45, 253, 155, 1)));
     background: -o-linear-gradient(bottom, rgba(34, 193, 195, 1) 0%, rgba(45, 253, 155, 1) 100%);
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(34, 193, 195, 1)), to(rgba(45, 253, 155, 1)));
     background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(45, 253, 155, 1) 100%);
     border: 6px double white;
     border-radius: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    max-width: 420px;
-    height: 200px;
+    max-width: 500px;
+    height: 220px;
     margin-bottom: 20px;
     margin-right: 20px;
     padding: 10px;
@@ -45,16 +45,28 @@
 /* CARD - IMAGE */
 
 .card-image {
-    max-width: 150px;
-    height: 100%;
+    width: 200px;
+    height: 188px;
     border-radius: 15px;
 }
 
-/* CARD - TITLE AND TEXT */
+/* CARD - TEXT AND ICON */
+
+.text-and-icon {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+
+/* TEXT AND ICON - TITLE AND TEXT */
 
 .title-and-text {
-    padding-left: 10px;
-    overflow: hidden;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     height: 130px;
 }
 
@@ -64,7 +76,7 @@
     margin-right: auto;
     width: -webkit-max-content;
     width: -moz-max-content;
-    width: max-content;
+    width: max-content; 
 }
 
 .card-title-text {
@@ -85,13 +97,13 @@
     word-wrap: break-word; 
 }
 
+/* TEXT AND ICON - ARROW CONTAINER */
+
 .arrow-container {
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-    position: absolute;
-    bottom: 5px;
-    right: 15px;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin-left: auto;
+    margin-right: 0;
 }
 
 .arrow-icon {
@@ -119,17 +131,26 @@
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
-        width: 250px;
-        height: auto;
-        max-height: 450px;
-        padding-bottom: 35px;
+        width: 270px;
+        height: 480px;
     }
 
     .card-image {
-        height: auto;
-        max-width: 100%;
-        max-height: 230px;
+        width: 100%;
+        height: 60%;
         margin-bottom: 10px;
+    }
+
+    .text-and-icon {
+        height: 40%;
+        margin-bottom: 10px;
+    }
+
+    .title-and-text {
+        height: -webkit-max-content;
+        height: -moz-max-content;
+        height: max-content;
+        margin-bottom: 20px;
     }
 }
 
