@@ -53,9 +53,6 @@ hamburgerMenu.addEventListener("click", () => {
 let tagsContainer = document.getElementsByClassName("tags-container")[0];
 let arrow = document.getElementsByClassName("arrow")[0];
 
-console.log(tagsContainer);
-console.log(arrow);
-
 function showOrHideTags() {
    tagsContainer.classList.toggle("js-tag");
 
