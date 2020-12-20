@@ -13,7 +13,7 @@ class Article(models.Model):
     created = models.DateField(auto_now_add=True)
     updated = models.DateField(auto_now=True)
     tag = models.ManyToManyField('Tag')
-    
+
     class Meta:
         ordering = ['-pk']
 
@@ -22,8 +22,8 @@ class Article(models.Model):
 
     def get_absolute_url(self):
         return reverse("article_detail", kwargs={"slug": self.slug})
-    
- 
+
+
     def save(self, *args, **kwargs):
         if not self.slug:
             self.slug = slugify(self.title)
