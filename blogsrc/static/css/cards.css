@@ -1,6 +1,7 @@
-
 .card-header {
     color: var(--color-light-blue);
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     margin-bottom: 20px;
     margin-left: auto;
@@ -10,22 +11,32 @@
 /* CARD */
 
 .card-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     padding-left: 30px;
 }
 
 .card {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    background: -o-linear-gradient(bottom, rgba(34, 193, 195, 1) 0%, rgba(45, 253, 155, 1) 100%);
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(34, 193, 195, 1)), to(rgba(45, 253, 155, 1)));
     background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(45, 253, 155, 1) 100%);
     border: 6px double white;
     border-radius: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    max-width: 420px;
-    height: 200px;
+    max-width: 500px;
+    height: 220px;
     margin-bottom: 20px;
-    margin-right: 20px;
+    margin-right: 10px;
     padding: 10px;
     position: relative;
 }
@@ -33,23 +44,38 @@
 /* CARD - IMAGE */
 
 .card-image {
-    max-width: 150px;
-    height: 100%;
+    width: 200px;
+    height: 188px;
     border-radius: 15px;
 }
 
-/* CARD - TITLE AND TEXT */
+/* CARD - TEXT AND ICON */
+
+.text-and-icon {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+/* TEXT AND ICON - TITLE AND TEXT */
 
 .title-and-text {
-    padding-left: 10px;
-    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
     height: 130px;
+    margin-left: 10px;
 }
 
 .card-title-link {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
 }
 
@@ -64,18 +90,22 @@
 }
 
 .card-text {
-    margin-top: 10px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
     font-size: 1.5rem;
     line-height: 19px;
-    text-align: center;  
-    word-wrap: break-word; 
+    margin-top: 10px;
+    overflow: hidden;
 }
 
+/* TEXT AND ICON - ARROW CONTAINER */
+
 .arrow-container {
-    width: max-content;
-    position: absolute;
-    bottom: 5px;
-    right: 15px;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    margin-left: auto;
+    margin-right: 0;
 }
 
 .arrow-icon {
@@ -91,24 +121,35 @@
     fill: white;
 }
 
-
 /* MEDIA QUERIES */
 
 @media(max-width:760px) {
     .card {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
-        width: 250px;
-        height: auto;
-        max-height: 450px;
-        padding-bottom: 35px;
+        width: 270px;
+        height: 480px;
     }
-
     .card-image {
-        height: auto;
-        max-width: 100%;
-        max-height: 230px;
+        width: 100%;
+        height: 60%;
         margin-bottom: 10px;
+    }
+    .text-and-icon {
+        height: 40%;
+        margin-bottom: 10px;
+    }
+    .title-and-text {
+        height: -webkit-max-content;
+        height: -moz-max-content;
+        height: max-content;
+        margin-bottom: 20px;
+        text-align: center;
     }
 }
 

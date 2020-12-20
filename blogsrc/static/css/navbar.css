@@ -1,19 +1,27 @@
 .header-and-nav {
     border-bottom: 1px solid var(--color-transparent-blue);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 20px 20px 20px 20px;
 }
 
 .top-header {
     padding-left: 10px;
     padding-right: 10px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
 }
 
 .logo-text h1 {
     color: var(--color-light-blue);
     font-size: 3.5rem;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
 }
 
@@ -32,10 +40,14 @@
 }
 
 .nav-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     height: 40px;
     width: 100%;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .nav-list-item {
@@ -59,6 +71,8 @@
     width: 0px;
     height: 2px;
     background-color: var(--color-transparent-blue);
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
     transition: all 1s ease;
 }
 
@@ -68,12 +82,18 @@
 
 #search {
     margin-left: auto;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
 }
 
 #search-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .search-bar {
@@ -87,7 +107,8 @@
 .search-button {
     background-color: var(--color-light-gray);
     border: 2px solid var(--color-light-gray);
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     height: 34px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -117,6 +138,8 @@
     width: 0px;
     height: 2px;
     background-color: var(--color-transparent-blue);
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
     transition: all 1s ease;
 }
 
@@ -128,7 +151,11 @@
     cursor: pointer;
     padding: 5px;
     width: 20px;
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    -o-transition: transform 1s;
     transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
     position: absolute;
 }
 
@@ -137,7 +164,9 @@
 }
 
 .js-arrow {
-    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
 }
 
 .hamburger-menu {
@@ -176,29 +205,42 @@
     .hamburger-menu {
         display: block;
         cursor: pointer;
+        -webkit-transition: all 1s;
+        -o-transition: all 1s;
         transition: all 1s;
     }
     .js-rotate {
-        transform: rotate(-90deg);
+        -webkit-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+                transform: rotate(-90deg);
     }
     .stick {
         width: 35px;
         height: 5px;
+        background: -o-linear-gradient(bottom, rgba(34, 193, 195, 1) 0%, rgba(45, 253, 155, 1) 100%);
+        background: -webkit-gradient(linear, left bottom, left top, from(rgba(34, 193, 195, 1)), to(rgba(45, 253, 155, 1)));
         background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(45, 253, 155, 1) 100%);
     }
     .stick:nth-child(2) {
         margin: 6px 0;
     }
     .js-color {
+        background: -o-linear-gradient(bottom, rgb(161, 20, 20) 0%, rgb(243, 4, 4) 100%) !important;
+        background: -webkit-gradient(linear, left bottom, left top, from(rgb(161, 20, 20)), to(rgb(243, 4, 4))) !important;
         background: linear-gradient(0deg, rgb(161, 20, 20) 0%, rgb(243, 4, 4) 100%) !important;
     }
     /* NAVBAR */
     .navbar {
-        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
         border: 6px double white;
+        background-image: -o-linear-gradient(bottom, rgba(34, 193, 195, 1) 0%, rgba(45, 253, 155, 1) 100%);
+        background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(34, 193, 195, 1)), to(rgba(45, 253, 155, 1)));
         background-image: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(45, 253, 155, 1) 100%);
         height: 0px;
         width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         opacity: 1;
         padding: 0;
@@ -207,22 +249,34 @@
         left: 0;
         visibility: visible;
         z-index: 99;
+        -webkit-transition: height 1s;
+        -o-transition: height 1s;
         transition: height 1s;
-        transition-delay: 1s;
+        -webkit-transition-delay: 1s;
+             -o-transition-delay: 1s;
+                transition-delay: 1s;
     }
     .nav-list {
         height: inherit;
         width: 100%;
-        flex-direction: column;
-        flex-wrap: wrap;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
     }
     .nav-list-item {
         display: block;
         padding: 10px 0px 10px 0;
         margin-left: auto;
         margin-right: auto;
+        width: -webkit-max-content;
+        width: -moz-max-content;
         width: max-content;
-        transform: translateX(-300vh);
+        -webkit-transform: translateX(-300vh);
+            -ms-transform: translateX(-300vh);
+                transform: translateX(-300vh);
     }
     #search {
         margin-left: auto;
@@ -236,47 +290,77 @@
         padding-right: 0;
     }
     .js-nav-list-item-hide {
-        transform: translateX(-300vh);
+        -webkit-transform: translateX(-300vh);
+            -ms-transform: translateX(-300vh);
+                transform: translateX(-300vh);
+        -webkit-transition: -webkit-transform 1s;
+        transition: -webkit-transform 1s;
+        -o-transition: transform 1s;
         transition: transform 1s;
+        transition: transform 1s, -webkit-transform 1s;
     }
     .js-nav-list-item-hide:nth-child(1) {
         padding-right: 0;
-        transition-delay: 800ms;
+        -webkit-transition-delay: 800ms;
+             -o-transition-delay: 800ms;
+                transition-delay: 800ms;
     }
     .js-nav-list-item-hide:nth-child(2) {
-        transition-delay: 600ms;
+        -webkit-transition-delay: 600ms;
+             -o-transition-delay: 600ms;
+                transition-delay: 600ms;
     }
     .js-nav-list-item-hide:nth-child(3) {
-        transition-delay: 400ms;
+        -webkit-transition-delay: 400ms;
+             -o-transition-delay: 400ms;
+                transition-delay: 400ms;
     }
     .js-nav-list-item-hide:nth-child(4) {
-        transition-delay: 200ms;
+        -webkit-transition-delay: 200ms;
+             -o-transition-delay: 200ms;
+                transition-delay: 200ms;
     }
     .js-navbar {
         height: 270px;
+        -webkit-transition: height 2s;
+        -o-transition: height 2s;
         transition: height 2s;
-        transition-delay: 0s;
+        -webkit-transition-delay: 0s;
+             -o-transition-delay: 0s;
+                transition-delay: 0s;
     }
     .js-nav-list-item-show {
-        transform: translateX(0vh);
+        -webkit-transform: translateX(0vh);
+            -ms-transform: translateX(0vh);
+                transform: translateX(0vh);
     }
     .js-nav-list-item-show:nth-child(1) {
         padding-right: 0;
-        transition-delay: 200ms;
+        -webkit-transition-delay: 200ms;
+             -o-transition-delay: 200ms;
+                transition-delay: 200ms;
     }
     .js-nav-list-item-show:nth-child(2) {
-        transition-delay: 400ms;
+        -webkit-transition-delay: 400ms;
+             -o-transition-delay: 400ms;
+                transition-delay: 400ms;
     }
     .js-nav-list-item-show:nth-child(3) {
-        transition-delay: 600ms;
+        -webkit-transition-delay: 600ms;
+             -o-transition-delay: 600ms;
+                transition-delay: 600ms;
     }
     .js-nav-list-item-show:nth-child(4) {
-        transition-delay: 800ms;
+        -webkit-transition-delay: 800ms;
+             -o-transition-delay: 800ms;
+                transition-delay: 800ms;
     }
 }
 
 @media(max-width:270px) {
     .search-button {
+        width: -webkit-max-content;
+        width: -moz-max-content;
         width: max-content;
     }
     .search-bar {

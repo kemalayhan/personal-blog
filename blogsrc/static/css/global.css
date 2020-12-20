@@ -17,6 +17,8 @@ html, body {
 }
 
 body {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 255, 255)), color-stop(rgb(230, 230, 230)), to(rgb(150, 150, 150)));
+    background-image: -o-linear-gradient(rgb(255, 255, 255), rgb(230, 230, 230), rgb(150, 150, 150));
     background-image: linear-gradient(rgb(255, 255, 255), rgb(230, 230, 230), rgb(150, 150, 150));
     font-family: 'Roboto', sans-serif;
     position: relative;
@@ -27,15 +29,23 @@ a {
 }
 
 main {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding-top: 20px;
     min-height: calc(100vh - 80px);
 }
 
 .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 95%;
 }
 
