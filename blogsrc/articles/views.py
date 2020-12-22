@@ -14,12 +14,14 @@ class ArticleListView(TagMixin, ListView):
     context_object_name = "articles"
 
     def get_queryset(self):
-        qs = Article.objects.defer(
-                'content',
+        q = self.request.GET.get('q', None)
+        qs = Article.objects.all().defer('content',
                 'created',
                 'updated',
                 'tag'
-        )
+                )
+        if q:
+            qs = qs.filter(title__icontains=q)
         return qs
 
 
