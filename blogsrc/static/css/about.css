@@ -52,18 +52,10 @@
     font-size: 2rem;
 }
 
-.social-icon {
-    width: 50px;
-    height: 50px;
-}
 
 .social-icon-link:nth-child(2) {
     margin-left: 10px;
     margin-right: 10px;
-}
-
-.social-icon:hover path {
-    fill: white;
 }
 
 

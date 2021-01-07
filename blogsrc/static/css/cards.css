@@ -1,13 +1,18 @@
+/* MAIN CONTENT HEADER */
+
+.main-content-header {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .main-content-heading {
     color: var(--color-light-blue);
     font-size: 2rem;
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
-    margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10px;
 }
 
 
@@ -22,7 +27,7 @@
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding: 20px;
+    padding: 0px 20px 20px 20px;
 }
 
 
@@ -72,7 +77,7 @@
 }
 
 .card-article-heading {
-    color: var(--color-dark-blue);
+    color: var(--color-light-blue);
     font-size: 1.8rem;
     font-weight: var(--bold);
 }
@@ -111,7 +116,7 @@
 }
 
 .arrow-icon path {
-    fill: var(--color-dark-blue);
+    fill: var(--color-light-blue);
 }
 
 .arrow-icon:hover path {
