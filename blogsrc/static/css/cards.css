@@ -1,5 +1,6 @@
-.card-header {
+.main-content-heading {
     color: var(--color-light-blue);
+    font-size: 2rem;
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
@@ -8,7 +9,8 @@
     margin-right: auto;
 }
 
-/* CARD */
+
+/* CARD  CONTAINER */
 
 .card-container {
     display: -webkit-box;
@@ -22,90 +24,84 @@
     padding-left: 30px;
 }
 
+
+/* CARD */
+
 .card {
+    background: linear-gradient(139deg, var(--color-grayish-blue) 0%, var(--color-dark-gray) 100%);
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    background: -o-linear-gradient(bottom, rgba(34, 193, 195, 1) 0%, rgba(45, 253, 155, 1) 100%);
-    background: -webkit-gradient(linear, left bottom, left top, from(rgba(34, 193, 195, 1)), to(rgba(45, 253, 155, 1)));
-    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(45, 253, 155, 1) 100%);
     border: 6px double white;
     border-radius: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    max-width: 500px;
-    height: 220px;
+    max-width: 850px;
+    height: 250px;
     margin-bottom: 20px;
-    margin-right: 10px;
     padding: 10px;
     position: relative;
 }
 
-/* CARD - IMAGE */
+
+/* CARD IMAGE */
 
 .card-image {
-    width: 200px;
-    height: 188px;
     border-radius: 15px;
+    margin-right: 20px;
+    width: 60%;
 }
 
-/* CARD - TEXT AND ICON */
 
-.text-and-icon {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    display: -webkit-box;
-    display: -ms-flexbox;
+/* CARD ARTICLE  */
+
+.card-article {
+    margin-top: 10px;
+    width: 40%;
+}
+
+
+/* CARD ARTICLE HEADER */   
+
+.card-article-header {
     display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
 }
 
-/* TEXT AND ICON - TITLE AND TEXT */
-
-.title-and-text {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    height: 130px;
-    margin-left: 10px;
-}
-
-.card-title-link {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-}
-
-.card-title-text {
+.card-article-heading {
     color: var(--color-dark-blue);
     font-size: 1.8rem;
-    font-weight: 600;
+    font-weight: var(--bold);
 }
 
-.card-title-text:hover {
-    color: white;
+.card-article-heading:hover {
+    color: #ffffff;
 }
 
-.card-text {
+
+/* CARD ARTICLE HEADER */  
+
+.card-article-text {
+    color: #fcebff;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 5;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: 400;
     line-height: 19px;
     margin-top: 10px;
     overflow: hidden;
 }
 
-/* TEXT AND ICON - ARROW CONTAINER */
+
+/* ARROW */
 
 .arrow-container {
-    -ms-flex-item-align: end;
-    align-self: flex-end;
-    margin-left: auto;
-    margin-right: 0;
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
 }
 
 .arrow-icon {
@@ -114,47 +110,34 @@
 }
 
 .arrow-icon path {
-    fill: var(--color-purple);
+    fill: var(--color-dark-blue);
 }
 
 .arrow-icon:hover path {
     fill: white;
 }
 
+
 /* MEDIA QUERIES */
 
-@media(max-width:760px) {
+@media(max-width:700px) {
     .card {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
         flex-direction: column;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        width: 270px;
-        height: 480px;
+        max-width: 500px;
+        min-height: 400px;
+        height: auto;
     }
+
     .card-image {
         width: 100%;
-        height: 60%;
-        margin-bottom: 10px;
+        height: auto;
     }
-    .text-and-icon {
-        height: 40%;
-        margin-bottom: 10px;
-    }
-    .title-and-text {
-        height: -webkit-max-content;
-        height: -moz-max-content;
-        height: max-content;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-}
 
-@media(max-width:450px) {
-    .card {
-        margin-right: 0px;
+    .card-article {
+        width: 100%;
+    }
+
+    .card-article-text {
+        text-align: center;
     }
 }

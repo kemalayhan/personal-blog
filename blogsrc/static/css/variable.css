@@ -1,7 +1,17 @@
 :root {
     --color-light-gray: hsl(0, 0%, 95%);
+    --color-dark-gray: hsl(156, 3%, 61%);
+
+    --color-grayish-blue: hsl(181, 46%, 69%);
     --color-light-blue: hsl(217, 71%, 47%);
     --color-transparent-blue: hsla(225, 100%, 65%, 0.2);
-    --color-dark-blue: hsl(244, 86%, 22%);
+    --color-dark-blue: hsl(242, 62%, 10%);
+
     --color-purple: hsl(263, 68%, 44%);
+
+
+    --small: 300;
+    --medium: 400;
+    --semi-bold: 500;
+    --bold: 700;
 }
