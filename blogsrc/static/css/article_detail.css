@@ -17,7 +17,7 @@
     width: 100%;
 }
 
-.main-image-container { 
+.article-main-image-container { 
     display: -webkit-box; 
     display: -ms-flexbox; 
     display: flex;
@@ -42,7 +42,7 @@
     word-wrap: break-word;
 }
 
-.article-header-h1 {
+.article-header-heading {
     font-size: 3rem;
     margin-bottom: 20px;
 }
@@ -70,13 +70,5 @@
     .article-content p img {
         display: block;
         max-width: 100% !important;
-    }
-}
-
-
-@media (max-width:500px) {
-    .article-container {
-        padding-left: 30px;
-        padding-right: 30px;
     }
 }

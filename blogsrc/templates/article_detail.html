@@ -10,16 +10,16 @@
 {% block body %}
     <div class="article-container">
 
-        <div class="main-image-container">
+        <div class="article-main-image-container">
             {% if object.main_image %}
                 <img class="article-main-image" src=" {{ object.main_image.url }} " alt="image">
             {% endif %}
         </div>
 
         <header class="article-header">
-            <h1 class="article-header-h1">
+            <h2 class="article-header-heading">
                 {{object.title}}
-            </h1>
+            </h2>
         </header>
 
         <article class="article-content">
