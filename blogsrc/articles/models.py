@@ -1,3 +1,4 @@
+from django.core.validators import FileExtensionValidator
 from ckeditor_uploader.fields import RichTextUploadingField
 from django.db import models
 from django.template.defaultfilters import slugify
@@ -8,7 +9,7 @@ class Article(models.Model):
     title = models.CharField(max_length=70)
     brief = models.CharField(max_length=250)
     content = RichTextUploadingField(blank=True, null=True)
-    main_image = models.ImageField(upload_to='article_image/')
+    main_image = models.FileField(upload_to='article_image/', validators=[FileExtensionValidator(['jpg', 'jpeg', 'png', 'svg'])])
     slug = models.SlugField(unique=True, blank=True)
     created = models.DateField(auto_now_add=True)
     updated = models.DateField(auto_now=True)
