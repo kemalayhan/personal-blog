@@ -43,6 +43,7 @@
 }
 
 .article-header-heading {
+    color: var(--color-light-blue);
     font-size: 3rem;
     margin-bottom: 20px;
 }
@@ -54,7 +55,8 @@
     margin: 20px auto 20px auto;
 }
 
-.article-content p {
+.article-content * {
+    color: #ffffff;
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;

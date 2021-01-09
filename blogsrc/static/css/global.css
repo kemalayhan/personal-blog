@@ -11,7 +11,7 @@ html, body {
 }
 
 body {
-    background: var(--color-light-gray);
+    background: #0C1016;
     font-family: 'Roboto', sans-serif;
     position: relative;
 }
@@ -41,7 +41,7 @@ main {
 }
 
 footer {
-    background-color: rgba(19, 16, 16, 0.534);
+    background-color: rgba(34, 32, 32, 0.534);
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -71,6 +71,10 @@ footer {
 
 .social-icon-container .social-icon {
     margin-right: 70px;
+}
+
+.social-icon path {
+    fill: #ffffff;
 }
 
 .social-icon:hover path {

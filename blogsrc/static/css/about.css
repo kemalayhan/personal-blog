@@ -7,7 +7,7 @@
 }
 
 .introduction-header {
-    color: var(--color-light-blue);
+    color: var(--color-dark-gray);
     margin-top: 10px;
     margin-bottom: 10px;
     width: -webkit-max-content;
@@ -20,6 +20,7 @@
 }
 
 .introduction-text {
+    color: #ffffff;
     font-size: 1.7rem;
 }
 
@@ -49,6 +50,7 @@
 }
 
 .author-heading {
+    color: var(--color-dark-gray);
     font-size: 2rem;
 }
 

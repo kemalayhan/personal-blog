@@ -1,7 +1,5 @@
 .tags-container {
-    background: -webkit-gradient(linear, left bottom, left top, from(rgba(34, 193, 195, 1)), to(rgba(45, 253, 155, 1)));
-    background: -o-linear-gradient(bottom, rgba(34, 193, 195, 1) 0%, rgba(45, 253, 155, 1) 100%);
-    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(45, 253, 155, 1) 100%);
+    background:  #0C1016;
     border: 6px double white;
     border-radius: 15px;
     display: -webkit-box;
@@ -29,9 +27,6 @@
 } 
 
 .tag {
-    background-color: var(--color-light-gray);
-    border: 3px solid var(--color-transparent-blue);
-    border-radius: 50px;
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
@@ -51,7 +46,7 @@
 }
 
 .tag-link {
-    color: var(--color-light-blue);
+    color: var(--color-dark-gray);
     font-size: 1.5rem;
     font-weight: 600;
 }
