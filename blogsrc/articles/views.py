@@ -2,14 +2,13 @@ from django.shortcuts import render
 from django.views.generic import DetailView, ListView, TemplateView
 
 from .models import Article, Tag
-from .mixin import TagMixin
 
-class ArticleDetailView(TagMixin, DetailView):
+class ArticleDetailView(DetailView):
     model = Article
     template_name = "article_detail.html"
 
 
-class ArticleListView(TagMixin, ListView):
+class ArticleListView(ListView):
     template_name = "cards.html"
     context_object_name = "articles"
 
@@ -25,7 +24,7 @@ class ArticleListView(TagMixin, ListView):
         return qs
 
 
-class ArticleTagView(TagMixin, DetailView):
+class ArticleTagView(DetailView):
     model = Tag
     template_name = "cards.html"
     context_object_name = "tag"
@@ -35,5 +34,5 @@ class ArticleTagView(TagMixin, DetailView):
         context["articles"] = self.object.article_set.all()
         return context
 
-class AboutTemplate(TagMixin, TemplateView):
+class AboutTemplate(TemplateView):
     template_name = "about.html"
