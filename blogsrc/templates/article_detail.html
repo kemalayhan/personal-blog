@@ -1,5 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
+
+{% block description %}<meta name="description" content= "{{object.description}}"/>{% endblock description %}
+
 {body} {{descripti}} {body}
 {% block title %} {{object.title}} {% endblock title %}
 

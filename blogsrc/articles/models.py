@@ -14,6 +14,7 @@ class Article(models.Model):
     created = models.DateField(auto_now_add=True)
     updated = models.DateField(auto_now=True)
     tag = models.ManyToManyField('Tag')
+    description = models.TextField()
 
     class Meta:
         ordering = ['-pk']
