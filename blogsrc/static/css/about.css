@@ -1,9 +1,10 @@
 .profile-container {
     margin-top: 20px;
     max-width: 1000px;
-    min-width: 275px;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .introduction-header {
@@ -29,10 +30,11 @@
     grid-gap: 10px 15px;
     grid-template-columns: 100px 200px;
     grid-template-rows: 30px 70px;
-    width: 300px;
+    max-width: 300px;
     height: 100px;
     margin-top: 20px;
-    padding: 20px 10px 20px 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .profile-image {
@@ -61,3 +63,34 @@
 }
 
 
+
+@media(max-width:325px) {
+
+    .introduction-header {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .introduction-text {
+        line-height: 1.7;
+        text-align: center;
+    }
+
+    .profile-card {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; 
+    }
+
+    .author-header {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+}
