@@ -16,7 +16,7 @@
 /* CARD */
 
 .card {
-    background: #00b7eb;
+    background: var(--color-turquoise);
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border: 6px double white;
@@ -37,7 +37,7 @@
 .card-image {
     border-radius: 15px;
     margin-right: 20px;
-    width: 60%;
+    width: 50%;
 }
 
 
@@ -45,16 +45,22 @@
 
 .card-article {
     margin-top: 10px;
-    width: 40%;
+    width: 50%;
 }
 
 
 /* CARD ARTICLE HEADER */   
 
 .card-article-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-bottom: 10px;
 }
 
@@ -110,7 +116,10 @@
 
 @media(max-width:700px) {
     .card {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         max-width: 500px;
         width: 100%;
         min-height: 500px;
@@ -123,14 +132,36 @@
     }
 
     .card-article {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         width: 100%;
     }
 
     .card-article-text {
         max-width: 370px;
         text-align: center;
+        -webkit-line-clamp: 4;
+    }
+
+    .arrow-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: end;
+            -ms-flex-align: end;
+                align-items: flex-end;
+        height: 100%;
+        position: static;
+        margin-left: auto;
+        margin-right: 0;
+        margin-top: 10px;
     }
 }
